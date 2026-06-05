@@ -6,11 +6,11 @@ const Timer = () =>{
     const [sec,setSec]=useState(0);
 
     useEffect(() => {
-    const id = setInterval(() => {
+    const time = setInterval(() => {
         setSec((prev) => prev + 1);
     }, 1000);
 
-    return () => clearInterval(id);
+    return () => clearInterval(time);
     }, []);
 
     return (
